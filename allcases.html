@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OneHandWeb</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+</head>
+
+<body>
+    <!--header-->
+    <header>
+        <div class="header-container allcases">
+            <div class="allcasesback"></div>
+            <div class="container-fluid pt-3">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                        <img src="images/logo.png" alt="OneHand">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse pt-3 pl-md-5" id="navbarNav">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Site
+                                    Ideas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Donor and
+                                    needy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">From your
+                                    hand to theirs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Usage
+                                    controls</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    EN
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">AR</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="requesthelp align-self-center">
+                                    <img src="images/request_help.png" alt="OneHand">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!--filter-->
+            <div class="container-fluid-jumbotron">
+                <div class="container-fluid pb-3">
+                    <div class="row">
+                        <div class="col-md-7 col-sm-12">
+                            <div class="jumbotron jumbotron-fluid">
+                                <div class="container">
+                                    <h1 class="display-4">Help by sharing, save lifes! </h1>
+                                    <p class="lead pt-1">When a charity is created most people think about the
+                                        altruistic intentions behind its creation. They think that the founder wanted to
+                                        improve the world or wanted to further a specific cause. While I think that this
+                                        is true in nearly every case, there are also other strong motivations and
+                                        sometimes these can interfere with or even supersede the organisation’s stated
+                                        mission.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="row">
+                        <div class="col mt-3">
+                            <div class="row filter-box pr-2 pb-3 pl-2 pt-0">
+                                <div class="col-md-4 col-sm-12 pt-3">
+                                    <div>Filtered by</div>
+        
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-12">
+                                            <div class="dropdown mt-3">
+                                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false">
+                                                    Country
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" href="#">Action</a>
+                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-12">
+                                            <div class="dropdown mt-3">
+                                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false">
+                                                    Section
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" href="#">Action</a>
+                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                </div>
+                                <div class="col-md-4 col-sm-12 pt-3">
+                                    <div>Cases</div>
+                                    <div class="row">
+                                        <div class="col mt-3">
+                                            <button type="button" class="btn btn-filter">All</button>
+                                            <button type="button" class="btn btn-filter">Recent</button>
+                                            <button type="button" class="btn btn-filter">Urgent</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-12 pt-3">
+                                    <div>Budget needed</div>
+                                    <div class="row">
+                                        <div class="col mt-3">
+                                            <form class="multi-range-field">
+                                                <input id="multi" class="multi-range" type="range" />
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6 text-left">Small Budget</div>
+                                        <div class="col-6 text-right">Big Budget</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                    <div class="row">
+                        <div class="col mt-3">
+                            <div class="row filter-box pr-2 pb-3 pl-2 pt-0">
+                                <div class="col">
+                                    <div class="row pt-5">
+                                        <div class="col blue">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control"
+                                                    placeholder="Take care of family">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-search" type="button">
+                                                        Search
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col pt-3 text-center">
+                                            <button class="badge badge-pill p-2 pl-3 pr-3 badge-selected">Food</button>
+                                            <button class="badge badge-pill p-2 pl-3 pr-3">Education</button>
+                                            <button class="badge badge-pill p-2 pl-3 pr-3">Take Care of family</button>
+                                            <button class="badge badge-pill p-2 pl-3 pr-3">Education</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                </div>
+            </div>
+            <!--filter-->
+        </div>
+    </header>
+    <!--header-->
+    
+    <!--body-->    
+    <!--help requests-->
+    <div class="container-fluid cards-container pt-1 pb-5">
+
+        <div class="container">
+            <div class="row mt-5" style="position: relative;">
+                <div class="col-md-4 col-sm-12">
+                    <div class="card">
+                        <img class="card-img-top" src="images/poverty_2.jpg" alt="help request">
+                        <div class="card-body">
+                            <div class="category">Education</div>
+                            <h5 class="card-title mt-2">Education</h5>
+                            <p class="card-text">Some quick example text to build on the Education and make up the
+                                bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Continue reading</a>
+                            <span class="float-right mt-2">case code: 1234</span>
+
+                            <div class="separator mt-3 mb-3"></div>
+                            <i class="fas fa-clock"></i>&nbsp; 2 months
+                            <i class="fas fa-map-marker-alt ml-3"></i>&nbsp; Indonesia
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+                    <div class="card">
+                        <img class="card-img-top" src="images/poverty_2.jpg" alt="help request">
+                        <div class="card-body">
+                            <div class="category">Education</div>
+                            <h5 class="card-title mt-2">Education</h5>
+                            <p class="card-text">Some quick example text to build on the Education and make up the
+                                bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Continue reading</a>
+                            <div class="separator mt-3 mb-3"></div>
+                            <i class="fas fa-clock"></i>&nbsp; 2 months
+                            <i class="fas fa-map-marker-alt ml-3"></i>&nbsp; Indonesia
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+                    <div class="card">
+                        <img class="card-img-top" src="images/poverty_2.jpg" alt="help request">
+                        <div class="card-body">
+                            <div class="category">Education</div>
+                            <h5 class="card-title mt-2">Education</h5>
+                            <p class="card-text">Some quick example text to build on the Education and make up the
+                                bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Continue reading</a>
+                            <div class="separator mt-3 mb-3"></div>
+                            <i class="fas fa-clock"></i>&nbsp; 2 months
+                            <i class="fas fa-map-marker-alt ml-3"></i>&nbsp; Indonesia
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+                    <div class="card">
+                        <img class="card-img-top" src="images/poverty_2.jpg" alt="help request">
+                        <div class="card-body">
+                            <div class="category">Education</div>
+                            <h5 class="card-title mt-2">Education</h5>
+                            <p class="card-text">Some quick example text to build on the Education and make up the
+                                bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Continue reading</a>
+                            <div class="separator mt-3 mb-3"></div>
+                            <i class="fas fa-clock"></i>&nbsp; 2 months
+                            <i class="fas fa-map-marker-alt ml-3"></i>&nbsp; Indonesia
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+                    <div class="card">
+                        <img class="card-img-top" src="images/poverty_2.jpg" alt="help request">
+                        <div class="card-body">
+                            <div class="category">Education</div>
+                            <h5 class="card-title mt-2">Education</h5>
+                            <p class="card-text">Some quick example text to build on the Education and make up the
+                                bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Continue reading</a>
+                            <div class="separator mt-3 mb-3"></div>
+                            <i class="fas fa-clock"></i>&nbsp; 2 months
+                            <i class="fas fa-map-marker-alt ml-3"></i>&nbsp; Indonesia
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+                    <div class="card">
+                        <img class="card-img-top" src="images/poverty_2.jpg" alt="help request">
+                        <div class="card-body">
+                            <div class="category">Education</div>
+                            <h5 class="card-title mt-2">Education</h5>
+                            <p class="card-text">Some quick example text to build on the Education and make up the
+                                bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Continue reading</a>
+                            <div class="separator mt-3 mb-3"></div>
+                            <i class="fas fa-clock"></i>&nbsp; 2 months
+                            <i class="fas fa-map-marker-alt ml-3"></i>&nbsp; Indonesia
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+                    <div class="card">
+                        <img class="card-img-top" src="images/poverty_2.jpg" alt="help request">
+                        <div class="card-body">
+                            <div class="category">Education</div>
+                            <h5 class="card-title mt-2">Education</h5>
+                            <p class="card-text">Some quick example text to build on the Education and make up the
+                                bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Continue reading</a>
+                            <div class="separator mt-3 mb-3"></div>
+                            <i class="fas fa-clock"></i>&nbsp; 2 months
+                            <i class="fas fa-map-marker-alt ml-3"></i>&nbsp; Indonesia
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+                    <div class="card">
+                        <img class="card-img-top" src="images/poverty_2.jpg" alt="help request">
+                        <div class="card-body">
+                            <div class="category">Education</div>
+                            <h5 class="card-title mt-2">Education</h5>
+                            <p class="card-text">Some quick example text to build on the Education and make up the
+                                bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Continue reading</a>
+                            <div class="separator mt-3 mb-3"></div>
+                            <i class="fas fa-clock"></i>&nbsp; 2 months
+                            <i class="fas fa-map-marker-alt ml-3"></i>&nbsp; Indonesia
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+                    <div class="card">
+                        <img class="card-img-top" src="images/poverty_2.jpg" alt="help request">
+                        <div class="card-body">
+                            <div class="category">Education</div>
+                            <h5 class="card-title mt-2">Education</h5>
+                            <p class="card-text">Some quick example text to build on the Education and make up the
+                                bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Continue reading</a>
+                            <div class="separator mt-3 mb-3"></div>
+                            <i class="fas fa-clock"></i>&nbsp; 2 months
+                            <i class="fas fa-map-marker-alt ml-3"></i>&nbsp; Indonesia
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="seemore">
+                    <img src="images/see_more.png" alt="OneHand">
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <!--help requests-->
+    <!--body-->
+
+    <!--footer-->
+    <footer class="pt-4">
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-3 mx-auto">
+
+                    <!-- Links -->
+                    <img src="images/logo.png" height="47px" alt="OneHand">
+                    <p class="mt-3">&quot;One Hand&quot; is a non-profit organization that aims to create a common
+                        humanitarian platform in
+                        which the donor communicates with the needy without any intermediary between them, through which
+                        he explains the help he needs, and chooses the needy donor who wants to help him. </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-3 mx-auto pl-md-5">
+
+                    <!-- Links -->
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#!">Terms &amp; Conditions</a>
+                        </li>
+                        <li>
+                            <a href="#!">Contact Us</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-3 mx-auto">
+
+                    <!-- Links -->
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#!">Terms &amp; Conditions</a>
+                        </li>
+                        <li>
+                            <a href="#!">Contact Us</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-3 mx-auto">
+
+                    <!-- Links -->
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#!">Terms &amp; Conditions</a>
+                        </li>
+                        <li>
+                            <a href="#!">Contact Us</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+            <!-- social -->
+            <div class="footer-copyright text-right py-3 social">
+                <a href="#" target="_blank"><img src="images/facebook_icon.svg"></a>
+                <a href="#" target="_blank"><img src="images/instagram_icon.svg"></a>
+                <a href="#" target="_blank"><img src="images/twitter_icon.svg"></a>
+                <a href="#" target="_blank"><img src="images/linkedin_icon.svg"></a>
+            </div>
+            <!-- social -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3" style="background: var(--dark-blue);">
+            &copy; OneHand. All rights reserved.
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!--footer-->
+
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/site.js" asp-append-version="true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://kit.fontawesome.com/e19c476714.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OneHandWeb</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+</head>
+
+<body>
+    <!--header-->
+    <header>
+        <div class="header-container cases">
+            <div class="container-fluid pt-3">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                        <img src="images/logo.png" alt="OneHand">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse pt-3 pl-md-5" id="navbarNav">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Site
+                                    Ideas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Donor and
+                                    needy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">From your
+                                    hand to theirs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Usage
+                                    controls</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    EN
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">AR</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="requesthelp align-self-center">
+                                    <img src="images/request_help.png" alt="OneHand">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!--header-->
+    
+    <!--body-->
+    <!--case overview-->
+    <div class="header-container cases">
+        <div class="container-fluid-jumbotron">
+            <div class="container-fluid pb-3">
+                <div class="row">
+                    <div class="col-md-5 col-sm-12 align-self-center">
+                        <div class="video-container"></div>
+                    </div>
+                    <div class="col-md-7 col-sm-12">
+                        <div class="jumbotron jumbotron-fluid">
+                            <div class="container">
+                                <h1 class="display-4">Kids need urgent help <button
+                                        class="badge badge-pill badge-danger">Urgent</button></h1>
+                                <p class="lead pt-1">Description/Notes: 45
+                                    <br />Description/Notes: 45
+                                    <br />
+                                    Description/Notes: 45
+                                </p>
+
+                                <i class="fas fa-clock"></i>&nbsp; 2 months
+                                <i class="fas fa-map-marker-alt ml-3"></i>&nbsp; Indonesia
+
+                                <a href="#" class="proceedtohelp pt-3">
+                                    <img src="images/proceed_in_help.png" alt="OneHand">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--case overview-->
+
+    <!--case description-->
+    <div class="container">
+        <main role="main" class="pt-4 pb-4">
+
+            <div class="nav-tabs-container">
+                <div class="row">
+                    <div class="col text-center">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="case-desc-tab" data-toggle="tab" href="#home" role="tab"
+                                    aria-controls="home" aria-selected="true">Case Description</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="more-details-tab" data-toggle="tab" href="#profile" role="tab"
+                                    aria-controls="profile" aria-selected="false">More Details</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active p-5" id="home" role="tabpanel"
+                                aria-labelledby="case-desc-tab">
+                                My hope is that at the very least when my girls hear these stories they will better
+                                understand why it’s important to support and donate to charitable organizations. Even
+                                better would be for these stories to inspire ideas about how my daughters could
+                                themselves begin non-profit organizations.
+                                <br /><br />
+
+                                Because when kids hear stories of other kids making a difference, it can be empowering.
+                                It breaks through mental barriers that say kids are too young to create change, kids
+                                don’t have enough experience, enough expertise.
+                                <br /><br />
+
+                                So share these stories with your own kids – watch them be wowed by what other kids have
+                                achieved and let that be inspiration for how they and your family can help in your own
+                                communities and the world.
+                            </div>
+                            <div class="tab-pane fade p-5" id="profile" role="tabpanel"
+                                aria-labelledby="more-details-tab">
+
+                                My hope is that at the very least when my girls hear these stories they will better
+                                understand why it’s important to support and donate to charitable organizations. Even
+                                better would be for these stories to inspire ideas about how my daughters could
+                                themselves begin non-profit organizations.
+                                <br /><br />
+
+                                Because when kids hear stories of other kids making a difference, it can be empowering.
+                                It breaks through mental barriers that say kids are too young to create change, kids
+                                don’t have enough experience, enough expertise.
+                                <br /><br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <!--case description-->
+
+    <!--search-->
+    <div class="container">
+        <main role="main" class="pt-4 pb-4">
+
+            <div class="container blue">
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="h2">Search more cases</div>
+                    </div>
+                </div>
+                <div class="row pt-5">
+                    <div class="col">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Take care of family">
+                            <div class="input-group-append">
+                                <button class="btn btn-search" type="button">
+                                    Search
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col pt-3 text-center">
+                        <button class="badge badge-pill p-2 pl-3 pr-3 badge-selected">Food</button>
+                        <button class="badge badge-pill p-2 pl-3 pr-3">Education</button>
+                        <button class="badge badge-pill p-2 pl-3 pr-3">Take Care of family</button>
+                        <button class="badge badge-pill p-2 pl-3 pr-3">Education</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!--search-->
+
+    <!--help requests-->
+    <div class="container-fluid cards-container pt-1 pb-5">
+
+        <div class="container">
+            <div class="row mt-5" style="position: relative;">
+                <div class="col-md-4 col-sm-12">
+                    <div class="card">
+                        <img class="card-img-top" src="images/poverty_2.jpg" alt="help request">
+                        <div class="card-body">
+                            <div class="category">Education</div>
+                            <h5 class="card-title mt-2">Education</h5>
+                            <p class="card-text">Some quick example text to build on the Education and make up the
+                                bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Continue reading</a>
+                            <div class="separator mt-3 mb-3"></div>
+                            <i class="fas fa-clock"></i>&nbsp; 2 months
+                            <i class="fas fa-map-marker-alt ml-3"></i>&nbsp; Indonesia
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+                    <div class="card">
+                        <img class="card-img-top" src="images/poverty_2.jpg" alt="help request">
+                        <div class="card-body">
+                            <div class="category">Education</div>
+                            <h5 class="card-title mt-2">Education</h5>
+                            <p class="card-text">Some quick example text to build on the Education and make up the
+                                bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Continue reading</a>
+                            <div class="separator mt-3 mb-3"></div>
+                            <i class="fas fa-clock"></i>&nbsp; 2 months
+                            <i class="fas fa-map-marker-alt ml-3"></i>&nbsp; Indonesia
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+                    <div class="card">
+                        <img class="card-img-top" src="images/poverty_2.jpg" alt="help request">
+                        <div class="card-body">
+                            <div class="category">Education</div>
+                            <h5 class="card-title mt-2">Education</h5>
+                            <p class="card-text">Some quick example text to build on the Education and make up the
+                                bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Continue reading</a>
+                            <div class="separator mt-3 mb-3"></div>
+                            <i class="fas fa-clock"></i>&nbsp; 2 months
+                            <i class="fas fa-map-marker-alt ml-3"></i>&nbsp; Indonesia
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+                    <div class="card">
+                        <img class="card-img-top" src="images/poverty_2.jpg" alt="help request">
+                        <div class="card-body">
+                            <div class="category">Education</div>
+                            <h5 class="card-title mt-2">Education</h5>
+                            <p class="card-text">Some quick example text to build on the Education and make up the
+                                bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Continue reading</a>
+                            <div class="separator mt-3 mb-3"></div>
+                            <i class="fas fa-clock"></i>&nbsp; 2 months
+                            <i class="fas fa-map-marker-alt ml-3"></i>&nbsp; Indonesia
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="seemore">
+                    <img src="images/see_more.png" alt="OneHand">
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <!--help requests-->
+
+    <!--map-->
+    <div class="container-fluid">
+        <div class="row mt-5 pt-3">
+            <div class="col text-center">
+                <div class="h2" style="color: var(--purple);">One hand helps fighting Poverty <br/>around the world </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col" style="padding: 0;">
+                <img class="img-fluid" src="images/map.PNG">
+            </div>
+        </div>
+    </div>
+    <!--map-->
+    <!--body-->
+
+    <!--footer-->
+    <footer class="pt-4">
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-3 mx-auto">
+
+                    <!-- Links -->
+                    <img src="images/logo.png" height="47px" alt="OneHand">
+                    <p class="mt-3">&quot;One Hand&quot; is a non-profit organization that aims to create a common
+                        humanitarian platform in
+                        which the donor communicates with the needy without any intermediary between them, through which
+                        he explains the help he needs, and chooses the needy donor who wants to help him. </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-3 mx-auto pl-md-5">
+
+                    <!-- Links -->
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#!">Terms &amp; Conditions</a>
+                        </li>
+                        <li>
+                            <a href="#!">Contact Us</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-3 mx-auto">
+
+                    <!-- Links -->
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#!">Terms &amp; Conditions</a>
+                        </li>
+                        <li>
+                            <a href="#!">Contact Us</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-3 mx-auto">
+
+                    <!-- Links -->
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#!">Terms &amp; Conditions</a>
+                        </li>
+                        <li>
+                            <a href="#!">Contact Us</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+            <!-- social -->
+            <div class="footer-copyright text-right py-3 social">
+                <a href="#" target="_blank"><img src="images/facebook_icon.svg"></a>
+                <a href="#" target="_blank"><img src="images/instagram_icon.svg"></a>
+                <a href="#" target="_blank"><img src="images/twitter_icon.svg"></a>
+                <a href="#" target="_blank"><img src="images/linkedin_icon.svg"></a>
+            </div>
+            <!-- social -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3" style="background: var(--dark-blue);">
+            &copy; OneHand. All rights reserved.
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!--footer-->
+
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/site.js" asp-append-version="true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://kit.fontawesome.com/e19c476714.js"></script>
+</body>
+
+</html>
